@@ -1155,50 +1155,71 @@ export default function Configure() {
         </div>
 
         <div className={styles.installButtons}>
-          <button
-            onClick={handleInstall}
-            className={styles.installButton}
-            disabled={disableButtons}
-          >
-            Install
-          </button>
-          <button
-            onClick={handleInstallToWeb}
-            className={styles.installButton}
-            disabled={disableButtons}
-          >
-            Install to Stremio Web
-          </button>
-          <button
-            onClick={handleCopyLink}
-            className={styles.installButton}
-            disabled={disableButtons}
-          >
-            Copy Link
-          </button>
-          {manualManifestUrl && (
-            <>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <p style={{ padding: '5px' }}>
-              If the above buttons do not work, you can use the following manifest URL to install the addon.
-            </p>
-            <input
-              type="text"
-              value={manualManifestUrl}
-              readOnly
-              style={{ width: '100%', padding: '5px', margin: '5px' }}
-            />
-            </div>
-            </>
-          )}
-        </div>
+  <button
+    onClick={handleInstall}
+    className={styles.installButton}
+    disabled={disableButtons}
+  >
+    Install
+  </button>
+  <button
+    onClick={handleInstallToWeb}
+    className={styles.installButton}
+    disabled={disableButtons}
+  >
+    Install to Stremio Web
+  </button>
+  <button
+    onClick={handleCopyLink}
+    className={styles.installButton}
+    disabled={disableButtons}
+  >
+    Copy Link
+  </button>
+  {manualManifestUrl && (
+    <>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <p style={{ padding: '5px' }}>
+          If the above buttons do not work, you can use the following manifest URL to install the addon.
+        </p>
+        <input
+          type="text"
+          value={manualManifestUrl}
+          readOnly
+          style={{ width: '100%', padding: '5px', margin: '5px' }}
+        />
       </div>
-      <ToastContainer
-        stacked
-        position="top-center"
-        transition={Slide}
-        draggablePercent={30}
-      />
-    </div>
-  );
+    </>
+  )}
+</div>
+
+<ToastContainer
+  stacked
+  position="top-center"
+  transition={Slide}
+  draggablePercent={30}
+/>
+
+const handleCopyLink = () => {
+  if (navigator.clipboard) {
+    // Modern browsers
+    navigator.clipboard.writeText(manualManifestUrl).then(
+      () => toast.success('Link copied successfully'),
+      () => toast.error('Failed to copy link')
+    );
+  } else {
+    // Fallback for Safari or unsupported browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = manualManifestUrl;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy'); // For legacy browsers
+      toast.success('Link copied successfully');
+    } catch (err) {
+      toast.error('Failed to copy link');
+    }
+    document.body.removeChild(textArea);
+  }
+};
 }
