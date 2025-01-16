@@ -17,12 +17,24 @@ jobs:
 
       - name: Configure Git Identity
         run: |
-          git config --global user.name "Oleg Lučić"
+          git config --global user.name "oleglucic"
           git config --global user.email "lucicoleg09@gmail.com"
 
       - name: Set Upstream
         run: |
           git remote add upstream https://github.com/Viren070/AIOStreams.git
           git fetch upstream
+
+      - name: Check for Updates
+        id: check
+        run: |
+          # Compare local main with upstream/main
+          git fetch upstream main
+          git diff --exit-code main upstream/main
+        continue-on-error: true
+
+      - name: Sync Fork
+        if: steps.check.outcome == 'failure' # Run only if there are updates
+        run: |
           git merge upstream/main
           git push origin main
