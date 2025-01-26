@@ -1,5 +1,5 @@
-<p align="center"><img src="https://raw.githubusercontent.com/Viren070/AIOStreams/refs/heads/main/packages/frontend/public/assets/logo.png" /></p>
-<h1 align="center" id="title">AIOStreams</h1>
+<p align="center"><img src="https://raw.githubusercontent.com/Vedansh/Scrapie/refs/heads/main/packages/frontend/public/assets/logo.png" /></p>
+<h1 align="center" id="title">Scrapie</h1>
 
 ## Table of Contents
 
@@ -85,7 +85,7 @@ It currently supports:
 - Orion Stremio Addon
 - Easynews
 - Easynews+
-- [Stremio GDrive](https://github.com/Viren070/stremio-gdrive-addon)
+- [Stremio GDrive](https://github.com/Vedansh/stremio-gdrive-addon)
 - Custom: You can input an addon URL and name and it will parse as much information as it can.
 
 > [!NOTE]
@@ -97,7 +97,7 @@ It currently supports:
 The addon can display your results in different formats. The formats available are:
 
 - gdrive:
-  Uses the format from this [Stremio GDrive](https://github.com/Viren070/stremio-gdrive-addon) addon
+  Uses the format from this [Stremio GDrive](https://github.com/Vedansh/stremio-gdrive-addon) addon
 
   ![image](https://github.com/user-attachments/assets/9d9c74ab-afde-41f9-ba94-eaf8904b580b)
 
@@ -116,7 +116,7 @@ The addon can display your results in different formats. The formats available a
 
 ### What is Stremio or How do I use this addon?
 
-Read my [Stremio guide](https://guides.viren070.me/stremio).
+Read my [Stremio guide](https://guides.vedansh.me/stremio).
 
 ## Usage
 
@@ -125,9 +125,9 @@ Read my [Stremio guide](https://guides.viren070.me/stremio).
 > [!IMPORTANT]
 > Torrentio is disabled on the public instance!
 
-[ElfHosted](https://elfhosted.com/) have been kind enough to host a [community instance of AIOStreams](https://aiostreams.elfhosted.com/configure).
+[ElfHosted](https://elfhosted.com/) have been kind enough to host a [community instance of Scrapie](https://scrapie.elfhosted.com/configure).
 
-This community instance does have a ratelimit in place, but it is unlikely you will reach it. It also avoids the ratelimits of ElfHosted addons like Comet and MediaFusion as AIOStreams' requests to these addons are routed internally.
+This community instance does have a ratelimit in place, but it is unlikely you will reach it. It also avoids the ratelimits of ElfHosted addons like Comet and MediaFusion as Scrapie' requests to these addons are routed internally.
 However, other non-ElfHosted addons may rate limit the community instance.
 
 ### Deploying your own instance
@@ -171,7 +171,7 @@ This addon can be deployed as a [Hugging Face](https://huggingface.co/) space.
 FROM node:22-alpine AS builder
 WORKDIR /build
 RUN apk add --no-cache git && \
-git clone https://github.com/Viren070/AIOStreams.git . && \
+git clone https://github.com/Vedansh/Scrapie.git . && \
 apk del git
 
 RUN npm install
@@ -229,7 +229,7 @@ To update the addon, you can simply go to the `Settings` tab and click `Factory 
 This addon can be deployed as a [Cloudflare Worker](https://workers.cloudflare.com/).
 
 > [!NOTE]
-> Cloudflare Workers cannot make requests to other Cloudflare Workers from the same account. If you have deployed the Stremio GDrive addon already on a Cloudflare account, the AIOStreams worker on the same account will not be able to fetch streams from your Stremio GDrive worker.
+> Cloudflare Workers cannot make requests to other Cloudflare Workers from the same account. If you have deployed the Stremio GDrive addon already on a Cloudflare account, the Scrapie worker on the same account will not be able to fetch streams from your Stremio GDrive worker.
 
 > [!WARNING]
 > A Cloudflare Worker may get blocked by Torrentio. You may also encounter a build error, in which case you will have to edit the code slightly and lose the functionality of the `ADDON_PROXY` environment variable
@@ -242,14 +242,14 @@ This addon can be deployed as a [Cloudflare Worker](https://workers.cloudflare.c
 
 
 ```bash
-git clone https://github.com/Viren070/AIOStreams.git
-cd AIOStreams
+git clone https://github.com/Vedansh/Scrapie.git
+cd Scrapie
 npm i
 npm run build
 npm run deploy:cloudflare-worker
 ```
 
-If you get an error about the `node:sqlite` module, follow [these instructions](https://github.com/Viren070/AIOStreams/issues/32#issuecomment-2602643959)
+If you get an error about the `node:sqlite` module, follow [these instructions](https://github.com/Vedansh/Scrapie/issues/32#issuecomment-2602643959)
 
 ##### Updating
 
@@ -271,7 +271,7 @@ https://render.com/
 
 1. Deploy a new web service
 2. Select `Public Git Repository` as the source
-3. Enter `https://github.com/Viren070/AIOStreams`
+3. Enter `https://github.com/Vedansh/Scrapie`
 4. Deploy
 
 > [!TIP]
@@ -286,48 +286,48 @@ It is recommend to disable the `Auto Deploy` feature as the latest changes may n
 #### ElfHosted (paid)
 
 > [!NOTE] 
-> Use the link below to support me, 33% of your AIOStreams subscription will go to me ❤️ 
+> Use the link below to support me, 33% of your Scrapie subscription will go to me ❤️ 
 
-AIOStreams is available as a [paid product](https://store.elfhosted.com/product/aiostreams/elf/viren070/) on [ElfHosted](https://elfhosted.com). This offers you a no-hassle experience where you can expect things to "just work". 
+Scrapie is available as a [paid product](https://store.elfhosted.com/product/scrapie/elf/vedansh/) on [ElfHosted](https://elfhosted.com). This offers you a no-hassle experience where you can expect things to "just work". 
 
 #### Heroku (paid) 
 
 > [!TIP]
 > Heroku have a [student offer](https://www.heroku.com/github-students/) which gives you $13 worth of credit each month to spend for 24 months. 
 
-To deploy AIOStreams on [Heroku](https://heroku.com/), you can fork this repository, and create a new app on the [Heroku Dashboard](https://dashboard.heroku.com/), using `GitHub` as the deployment method in the `Deploy` tab, and choosing the `Node.js` buildpack in the `Settings` tab. 
+To deploy Scrapie on [Heroku](https://heroku.com/), you can fork this repository, and create a new app on the [Heroku Dashboard](https://dashboard.heroku.com/), using `GitHub` as the deployment method in the `Deploy` tab, and choosing the `Node.js` buildpack in the `Settings` tab. 
 
 ### Self-Hosting
 
 #### Docker
 
-[Docker](https://docs.docker.com/get-docker/) is a quick and convenient way to run this. Official images are available at the [ghcr.io](https://github.com/Viren070/AIOStreams/pkgs/container/aiostreams) and [docker.io](https://hub.docker.com/r/viren070/aiostreams) registries
+[Docker](https://docs.docker.com/get-docker/) is a quick and convenient way to run this. Official images are available at the [ghcr.io](https://github.com/Vedansh/Scrapie/pkgs/container/scrapie) and [docker.io](https://hub.docker.com/r/vedansh/scrapie) registries
 
 You can use the prebuilt images using one of the following commands:
 
 **GitHub Container Registry**:
 ```
-docker run -p 8080:3000 ghcr.io/viren070/aiostreams:latest
+docker run -p 8080:3000 ghcr.io/vedansh/scrapie:latest
 ```
 **Docker Hub**:
 ```
-docker run -p 8080:3000 viren070/aiostreams:latest
+docker run -p 8080:3000 vedansh/scrapie:latest
 ```
 
 If you would like to pass one of the [environment variables](CONFIGURING.md), you can provide the -e flag, e.g. to provide a SECRET_KEY (recommended, see [CONFIGURING.md](CONFIGURING.md) for how to generate a secret key.): 
 
 ```
-docker run -p 8080:3000 -e SECRET_KEY=... viren070/aiostreams:latest
+docker run -p 8080:3000 -e SECRET_KEY=... vedansh/scrapie:latest
 ```
 
 
 If you don't want to use a prebuilt image, or want to build from a commit that isn't tagged with a version yet, you can build the image yourself using the following commands: 
 
 ```
-git clone https://github.com/Viren070/aiostreams.git
-cd aiostreams
-docker build -t aiostreams .
-docker run -p 8080:3000 aiostreams
+git clone https://github.com/Vedansh/scrapie.git
+cd scrapie
+docker build -t scrapie .
+docker run -p 8080:3000 scrapie
 ```
 
 #### From source
@@ -336,10 +336,10 @@ You need Node.js and git installed. Node v22 and npm v10.9 were used in the deve
 
 1. Clone the project and set it as the current directory
    ```
-   git clone https://github.com/Viren070/AIOStreams.git
+   git clone https://github.com/Vedansh/Scrapie.git
    ```
    ```
-   cd aiostreams
+   cd scrapie
    ```
 2. Install project dependencies
    ```
@@ -362,7 +362,7 @@ You can change the PORT environment variable to change the port that the addon w
 Outside of the configuration page, the behaviour of this addon can also be changed with environment variables.  
 Most users don't need to set any environment variables. However, if you do, the SECRET_KEY is the one you might want to configure. This key enables encrypted manifest URLs, which help protect your API keys.
 
-With encryption, someone who has your manifest URL can't directly see your API keys. However, they can still install the addon using the encrypted URL. Once installed, they can view API keys within other addons' URLs that are contained within AIOStreams' responses, as most addons don’t encrypt their manifest URLs.
+With encryption, someone who has your manifest URL can't directly see your API keys. However, they can still install the addon using the encrypted URL. Once installed, they can view API keys within other addons' URLs that are contained within Scrapie' responses, as most addons don’t encrypt their manifest URLs.
 
 ### Environment Variables
 
@@ -378,7 +378,7 @@ Unfortunately, it is not currently possible to set environment variables for thi
 
 You can set environment variables in the Render dashboard.
 
-1. Go to the [Render dashboard](https://dashboard.render.com/) and select the `AIOStreams` service.
+1. Go to the [Render dashboard](https://dashboard.render.com/) and select the `Scrapie` service.
 2. Click on the `Environment` tab under the `Manage` section.
 3. Click on the `Edit` button.
 4. Click `Add Environment Variable` and enter the name and value of the environment variable you want to set.
@@ -397,8 +397,8 @@ You can set environment variables in the Render dashboard.
 You can set environment variables using a .env file in the root of the project.
 
 ```
-ADDON_NAME=AIOStreams
-ADDON_ID=aiostreams.viren070.com
+ADDON_NAME=Scrapie
+ADDON_ID=scrapie.vedansh.com
 PORT=3000
 SECRET_KEY=your_secret_key
 COMET_URL=https://comet.elfhosted.com/
@@ -409,10 +409,10 @@ COMET_URL=https://comet.elfhosted.com/
 
 1. Clone the project and set it as the current directory
    ```
-   git clone https://github.com/Viren070/AIOStreams.git
+   git clone https://github.com/Vedansh/Scrapie.git
    ```
    ```
-   cd aiostreams
+   cd scrapie
    ```
 2. Install project dependencies
    ```
@@ -453,11 +453,11 @@ npm run deploy:cloudflare-worker
 
 ## Disclaimer 
 
-AIOStreams and its developer do not host, store, or distribute any content that is found using this addon. All content is sourced from publicly available addons. AIOStreams does not endorse or promote piracy in any form. It is the user's responsibility to ensure that their use of this addon is in compliance with their local laws and regulations.
+Scrapie and its developer do not host, store, or distribute any content that is found using this addon. All content is sourced from publicly available addons. Scrapie does not endorse or promote piracy in any form. It is the user's responsibility to ensure that their use of this addon is in compliance with their local laws and regulations.
 
 ## Credits
 
 - Thanks to [sleeyax/stremio-easynews-addon](https://github.com/Sleeyax/stremio-easynews-addon) for the repository structure and dockerfile.
-- Thanks to all addon devs for creating the upstream addons that AIOStreams scrapes. 
+- Thanks to all addon devs for creating the upstream addons that Scrapie scrapes. 
 - [MediaFlow](https://github.com/Mhdzumair/mediaflow-proxy) for MediaFlow Proxy which is used in this addon to proxy your streams
 - Issue templates were stolen from [5rahim/seanime](https://github.com/5rahim/seanime) (You should really try out this app)

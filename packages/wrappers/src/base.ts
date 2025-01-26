@@ -4,16 +4,16 @@ import {
   StreamRequest,
   ParsedNameData,
   Config,
-} from '@aiostreams/types';
-import { parseFilename } from '@aiostreams/parser';
+} from '@scrapie/types';
+import { parseFilename } from '@scrapie/parser';
 import {
   getMediaFlowConfig,
   getMediaFlowPublicIp,
   serviceDetails,
   Settings,
-} from '@aiostreams/utils';
+} from '@scrapie/utils';
 import { fetch as uFetch, ProxyAgent } from 'undici';
-import { emojiToLanguage, codeToLanguage } from '@aiostreams/formatters';
+import { emojiToLanguage, codeToLanguage } from '@scrapie/formatters';
 
 export class BaseWrapper {
   private readonly streamPath: string = 'stream/{type}/{id}.json';

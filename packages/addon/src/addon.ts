@@ -11,21 +11,21 @@ import {
   getPeerflixStreams,
   getTorboxStreams,
   getTorrentioStreams,
-} from '@aiostreams/wrappers';
-import { Stream, ParsedStream, StreamRequest, Config } from '@aiostreams/types';
+} from '@scrapie/wrappers';
+import { Stream, ParsedStream, StreamRequest, Config } from '@scrapie/types';
 import {
   gdriveFormat,
   torrentioFormat,
   torboxFormat,
   imposterFormat,
-} from '@aiostreams/formatters';
+} from '@scrapie/formatters';
 import {
   createProxiedMediaFlowUrl,
   getMediaFlowConfig,
   Settings,
-} from '@aiostreams/utils';
+} from '@scrapie/utils';
 
-export class AIOStreams {
+export class Scrapie {
   private config: Config;
 
   constructor(config: any) {

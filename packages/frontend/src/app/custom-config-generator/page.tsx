@@ -174,7 +174,7 @@ export default function CustomConfigGenerator() {
       <div className={styles.content}>
         <div className={styles.header}>
           <div style={{ position: 'relative', display: 'inline-block' }}>
-            <h1 style={{ textAlign: 'center' }}>AIOStreams</h1>
+            <h1 style={{ textAlign: 'center' }}>Scrapie</h1>
           </div>
           <p style={{ textAlign: 'center', padding: '15px' }}>
             This tool allows you to generate the value needed for the{' '}
@@ -205,7 +205,7 @@ export default function CustomConfigGenerator() {
               <br />
               <br />
               <code>
-                https://your-aiostreams-url/
+                https://your-scrapie-url/
                 <span style={{ color: 'rgb(255, 0, 0)' }}>long-unique-id</span>
                 /manifest.json
               </code>
@@ -362,7 +362,7 @@ export default function CustomConfigGenerator() {
               value generated above. You can either manually use the value above
               or use the following commands to set it in a <code>.env</code>{' '}
               file. Ensure you are running these commands in the root directory
-              of AIOStreams.
+              of Scrapie.
             </p>
             <p style={{ marginTop: '10px' }}>
               <strong>Windows:</strong>

@@ -43,7 +43,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/viren070/aiostreams:${{ github.ref_name }}
-            ghcr.io/viren070/aiostreams:latest
-            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/aiostreams:${{ github.ref_name }}
-            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/aiostreams:latest
+            ghcr.io/vedansh/scrapie:${{ github.ref_name }}
+            ghcr.io/vedansh/scrapie:latest
+            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/scrapie:${{ github.ref_name }}
+            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/scrapie:latest

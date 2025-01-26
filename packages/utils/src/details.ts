@@ -1,4 +1,4 @@
-import { AddonDetail } from '@aiostreams/types';
+import { AddonDetail } from '@scrapie/types';
 import { Settings } from './settings';
 
 export const addonDetails: AddonDetail[] = [
@@ -38,7 +38,7 @@ export const addonDetails: AddonDetail[] = [
         required: false,
         label: 'Use Multiple Instances',
         description:
-          "Torrentio supports multiple services. By default, AIOStreams will pass all services to Torrentio. However, Torrentio has its\
+          "Torrentio supports multiple services. By default, Scrapie will pass all services to Torrentio. However, Torrentio has its\
           own service priority system which can't be overriden. If you want to use a custom priority system for your services, you can enable this option.\
           to create a separate request for each service.",
         type: 'checkbox',
@@ -515,7 +515,7 @@ export const addonDetails: AddonDetail[] = [
         required: false,
         label: 'Use Multiple Instances',
         description:
-          'Peerflix supports multiple debrid services. By default, AIOStreams will pass all services to Peerflix in one request.\
+          'Peerflix supports multiple debrid services. By default, Scrapie will pass all services to Peerflix in one request.\
           If you would like to override this behaviour and make a separate request for each service, enable this option.\
           I do not recommend enabling this option.',
         type: 'checkbox',

@@ -1,8 +1,8 @@
-import { AddonDetail, StreamRequest } from '@aiostreams/types';
-import { ParsedStream, Config } from '@aiostreams/types';
+import { AddonDetail, StreamRequest } from '@scrapie/types';
+import { ParsedStream, Config } from '@scrapie/types';
 import { BaseWrapper } from './base';
-import { addonDetails } from '@aiostreams/utils';
-import { Settings } from '@aiostreams/utils';
+import { addonDetails } from '@scrapie/utils';
+import { Settings } from '@scrapie/utils';
 
 // name, title, url
 export class Jackettio extends BaseWrapper {

@@ -1,5 +1,5 @@
 import { version, description } from '../package.json';
-import { Settings } from '@aiostreams/utils';
+import { Settings } from '@scrapie/utils';
 
 const manifest = (configured: boolean) => {
   return {
@@ -10,8 +10,8 @@ const manifest = (configured: boolean) => {
     catalogs: [],
     resources: ['stream'],
     background:
-      'https://raw.githubusercontent.com/Viren070/AIOStreams/refs/heads/main/packages/frontend/public/assets/background.png',
-    logo: 'https://raw.githubusercontent.com/Viren070/AIOStreams/refs/heads/main/packages/frontend/public/assets/logo.png',
+      'https://raw.githubusercontent.com/Vedansh/Scrapie/refs/heads/main/packages/frontend/public/assets/background.png',
+    logo: 'https://raw.githubusercontent.com/Vedansh/Scrapie/refs/heads/main/packages/frontend/public/assets/logo.png',
     types: ['movie', 'series'],
     behaviorHints: {
       configurable: true,

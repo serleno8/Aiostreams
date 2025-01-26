@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './AddonsList.module.css';
-import { AddonDetail, Config } from '@aiostreams/types';
+import { AddonDetail, Config } from '@scrapie/types';
 import CredentialInput from './CredentialInput';
 import MultiSelect from './MutliSelect';
 

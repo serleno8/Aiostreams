@@ -1,7 +1,7 @@
-import { AddonDetail, StreamRequest } from '@aiostreams/types';
-import { ParsedStream, Stream, Config } from '@aiostreams/types';
+import { AddonDetail, StreamRequest } from '@scrapie/types';
+import { ParsedStream, Stream, Config } from '@scrapie/types';
 import { BaseWrapper } from './base';
-import { addonDetails, Settings } from '@aiostreams/utils';
+import { addonDetails, Settings } from '@scrapie/utils';
 
 export class MediaFusion extends BaseWrapper {
   constructor(

@@ -1,5 +1,5 @@
 {
-  "name": "aiostreams",
+  "name": "scrapie",
   "version": "1.9.2",
   "description": "Stremio addon to combine streams into one addon",
   "main": "dist/server.js",
@@ -16,7 +16,7 @@
     "deploy:beamup": "beamup",
     "deploy:cloudflare-worker": "npm -w packages/cloudflare-worker run deploy"
   },
-  "author": "Viren070",
+  "author": "Vedansh",
   "license": "MIT",
   "workspaces": [
     "packages/*"

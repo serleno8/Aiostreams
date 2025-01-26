@@ -1,4 +1,4 @@
-import { ParsedNameData } from '@aiostreams/types';
+import { ParsedNameData } from '@scrapie/types';
 import { PARSE_REGEX } from './regex';
 
 function matchPattern(

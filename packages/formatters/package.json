@@ -1,5 +1,5 @@
 {
-  "name": "@aiostreams/formatters",
+  "name": "@scrapie/formatters",
   "version": "1.9.2",
   "main": "./dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "description": "Library to take parsed information and return a formatted Stremio stream name and description",
   "dependencies": {
-    "@aiostreams/types": "^1.0.0",
-    "@aiostreams/utils": "^1.0.0"
+    "@scrapie/types": "^1.0.0",
+    "@scrapie/utils": "^1.0.0"
   }
 }

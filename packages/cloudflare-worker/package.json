@@ -1,5 +1,5 @@
 {
-  "name": "@aiostreams/cloudflare-worker",
+  "name": "@scrapie/cloudflare-worker",
   "version": "1.9.2",
   "scripts": {
     "deploy": "wrangler deploy",
@@ -9,8 +9,8 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@aiostreams/addon": "^1.0.0",
-    "@aiostreams/types": "^1.0.0"
+    "@scrapie/addon": "^1.0.0",
+    "@scrapie/types": "^1.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241224.0",

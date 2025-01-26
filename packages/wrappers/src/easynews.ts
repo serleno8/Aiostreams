@@ -1,9 +1,9 @@
-import { ParsedNameData, StreamRequest } from '@aiostreams/types';
-import { parseFilename } from '@aiostreams/parser';
-import { ParsedStream, Stream, Config } from '@aiostreams/types';
+import { ParsedNameData, StreamRequest } from '@scrapie/types';
+import { parseFilename } from '@scrapie/parser';
+import { ParsedStream, Stream, Config } from '@scrapie/types';
 import { BaseWrapper } from './base';
-import { serviceDetails } from '@aiostreams/utils';
-import { Settings } from '@aiostreams/utils';
+import { serviceDetails } from '@scrapie/utils';
+import { Settings } from '@scrapie/utils';
 
 export class Easynews extends BaseWrapper {
   constructor(

@@ -1,6 +1,6 @@
-import { AIOStreams, errorResponse, validateConfig } from '@aiostreams/addon';
-import manifest from '@aiostreams/addon/src/manifest';
-import { Config, StreamRequest } from '@aiostreams/types';
+import { Scrapie, errorResponse, validateConfig } from '@scrapie/addon';
+import manifest from '@scrapie/addon/src/manifest';
+import { Config, StreamRequest } from '@scrapie/types';
 
 const HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -116,8 +116,8 @@ export default {
 
         let streamRequest: StreamRequest = { id, type };
 
-        const aioStreams = new AIOStreams(decodedConfig);
-        const streams = await aioStreams.getStreams(streamRequest);
+        const scrapie = new Scrapie(decodedConfig);
+        const streams = await scrapie.getStreams(streamRequest);
         return createJsonResponse({ streams });
       }
 

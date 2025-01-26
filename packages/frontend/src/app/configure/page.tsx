@@ -14,20 +14,20 @@ import {
   Encode,
   ServiceDetail,
   ServiceCredential,
-} from '@aiostreams/types';
+} from '@scrapie/types';
 import SortableCardList from '../../components/SortableCardList';
 import ServiceInput from '../../components/ServiceInput';
 import AddonsList from '../../components/AddonsList';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import showToast, { toastOptions } from '@/components/Toasts';
 import addonPackage from '../../../package.json';
-import { formatSize } from '@aiostreams/formatters';
+import { formatSize } from '@scrapie/formatters';
 import {
   allowedFormatters,
   allowedLanguages,
   validateConfig,
-} from '@aiostreams/config';
-import { addonDetails, serviceDetails, Settings } from '@aiostreams/utils';
+} from '@scrapie/config';
+import { addonDetails, serviceDetails, Settings } from '@scrapie/utils';
 
 import Slider from '@/components/Slider';
 import CredentialInput from '@/components/CredentialInput';
@@ -695,7 +695,7 @@ export default function Configure() {
           className={styles.supportMeButton}
           onClick={() => {
             window.open(
-              'https://github.com/sponsors/Viren070',
+              'https://github.com/sponsors/Vedansh',
               '_blank',
               'noopener noreferrer'
             );
@@ -732,19 +732,19 @@ export default function Configure() {
         <div className={styles.header}>
           <Image
             src="/assets/logo.png"
-            alt="AIOStreams Logo"
+            alt="Scrapie Logo"
             width={200}
             height={200}
             style={{ display: 'block', margin: '0 auto' }}
           />
           <div style={{ position: 'relative', display: 'inline-block' }}>
-            <h1 style={{ textAlign: 'center' }}>AIOStreams</h1>
+            <h1 style={{ textAlign: 'center' }}>Scrapie</h1>
             <span
               className={styles.version}
               title={`See what's new in v${version}`}
               onClick={() => {
                 window.open(
-                  `https://github.com/Viren070/AIOStreams/releases/tag/v${version}`,
+                  `https://github.com/Vedansh/Scrapie/releases/tag/v${version}`,
                   '_blank',
                   'noopener noreferrer'
                 );
@@ -762,7 +762,7 @@ export default function Configure() {
             />
           )}
           <p style={{ textAlign: 'center', padding: '15px' }}>
-            AIOStreams, the all-in-one streaming addon for Stremio. Combine your
+            Scrapie, the all-in-one streaming addon for Stremio. Combine your
             streams from all your addons into one and filter them by resolution,
             quality, visual tags and more.
             <br />
@@ -777,9 +777,9 @@ export default function Configure() {
             to retrieve streams from any addons you enable.
           </p>
           <p style={{ textAlign: 'center', padding: '15px' }}>
-            Made by Viren070. Source code on{' '}
+            Made by Vedansh. Source code on{' '}
             <a
-              href="https://github.com/Viren070/AIOStreams"
+              href="https://github.com/Vedansh/Scrapie"
               target="_blank"
               rel="noreferrer"
               style={{ textDecoration: 'underline' }}
@@ -1172,7 +1172,7 @@ export default function Configure() {
               <h2 style={{ padding: '5px' }}>Move Addon Name to Description</h2>
               <p style={{ padding: '5px' }}>
                 Move the addon name to the description of the stream. This will
-                show <code>AIOStreams</code> as the stream title, but move the
+                show <code>Scrapie</code> as the stream title, but move the
                 name of the addon that the stream is from to the description.
                 This is useful for Vidi users.
               </p>

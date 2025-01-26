@@ -1,5 +1,5 @@
 {
-  "name": "@aiostreams/types",
+  "name": "@scrapie/types",
   "version": "1.9.2",
   "main": "./dist/index.js",
   "scripts": {

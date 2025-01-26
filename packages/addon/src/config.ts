@@ -1,5 +1,5 @@
-import { AddonDetail, Config } from '@aiostreams/types';
-import { addonDetails, serviceDetails, Settings } from '@aiostreams/utils';
+import { AddonDetail, Config } from '@scrapie/types';
+import { addonDetails, serviceDetails, Settings } from '@scrapie/utils';
 
 export const allowedFormatters = [
   'gdrive',

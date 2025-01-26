@@ -1,4 +1,4 @@
-import { Settings } from '@aiostreams/utils';
+import { Settings } from '@scrapie/utils';
 
 export const errorResponse = (
   errorMessage: string,

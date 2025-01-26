@@ -5,9 +5,9 @@ import {
   ParsedStream,
   Stream,
   StreamRequest,
-} from '@aiostreams/types';
-import { parseFilename } from '@aiostreams/parser';
-import { Settings } from '@aiostreams/utils';
+} from '@scrapie/types';
+import { parseFilename } from '@scrapie/parser';
+import { Settings } from '@scrapie/utils';
 
 interface TorboxStream extends Stream {
   name: string;

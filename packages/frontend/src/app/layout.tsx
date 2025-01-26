@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'AIOStreams',
+  title: 'Scrapie',
   description:
     'Combine all your streams into one addon and display them with consistent formatting, sorting, and filtering.',
 };

@@ -1,4 +1,4 @@
-import { ParsedStream } from '@aiostreams/types';
+import { ParsedStream } from '@scrapie/types';
 import { formatDuration, formatSize } from './utils';
 
 const imposters = [

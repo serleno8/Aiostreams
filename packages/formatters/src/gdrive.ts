@@ -1,6 +1,6 @@
-import { ParsedStream } from '@aiostreams/types';
+import { ParsedStream } from '@scrapie/types';
 import { formatDuration, formatSize, languageToEmoji } from './utils';
-import { serviceDetails } from '@aiostreams/utils';
+import { serviceDetails } from '@scrapie/utils';
 
 export function gdriveFormat(
   stream: ParsedStream,

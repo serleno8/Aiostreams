@@ -1,5 +1,5 @@
 {
-  "name": "@aiostreams/parser",
+  "name": "@scrapie/parser",
   "version": "1.9.2",
   "main": "./dist/index.js",
   "scripts": {
@@ -8,6 +8,6 @@
   },
   "description": "Library to parse a torrent filename ",
   "dependencies": {
-    "@aiostreams/types": "^1.0.0"
+    "@scrapie/types": "^1.0.0"
   }
 }

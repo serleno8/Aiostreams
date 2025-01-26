@@ -1,6 +1,6 @@
-import { ParsedStream } from '@aiostreams/types';
+import { ParsedStream } from '@scrapie/types';
 import { formatSize, languageToEmoji } from './utils';
-import { serviceDetails } from '@aiostreams/utils';
+import { serviceDetails } from '@scrapie/utils';
 
 export function torrentioFormat(stream: ParsedStream): {
   name: string;

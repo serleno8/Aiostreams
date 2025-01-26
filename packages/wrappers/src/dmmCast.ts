@@ -1,4 +1,4 @@
-import { parseFilename } from '@aiostreams/parser';
+import { parseFilename } from '@scrapie/parser';
 import {
   ParsedStream,
   Stream,
@@ -6,10 +6,10 @@ import {
   AddonDetail,
   ParsedNameData,
   StreamRequest,
-} from '@aiostreams/types';
+} from '@scrapie/types';
 import { BaseWrapper } from './base';
-import { addonDetails, Settings } from '@aiostreams/utils';
-import { emojiToLanguage } from '@aiostreams/formatters';
+import { addonDetails, Settings } from '@scrapie/utils';
+import { emojiToLanguage } from '@scrapie/formatters';
 
 export class DMMCast extends BaseWrapper {
   constructor(

@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express';
 
 import path from 'path';
-import { AIOStreams } from './addon';
-import { Config, StreamRequest } from '@aiostreams/types';
+import { Scrapie } from './addon';
+import { Config, StreamRequest } from '@scrapie/types';
 import { validateConfig } from './config';
 import manifest from './manifest';
 import { errorResponse } from './responses';
@@ -11,7 +11,7 @@ import {
   addonDetails,
   compressAndEncrypt,
   parseAndDecryptString,
-} from '@aiostreams/utils';
+} from '@scrapie/utils';
 
 const app = express();
 console.log(`|INF| server > init: Starting server and loading settings...`);
@@ -152,7 +152,7 @@ app.get('/:config/stream/:type/:id.json', (req, res: Response): void => {
         `${error.message}, please check the logs or click this stream to create an issue on GitHub`,
         rootUrl(req),
         undefined,
-        'https://github.com/Viren070/AIOStreams/issues/new?template=bug_report.yml'
+        'https://github.com/Vedansh/Scrapie/issues/new?template=bug_report.yml'
       )
     );
     return;
@@ -185,8 +185,8 @@ app.get('/:config/stream/:type/:id.json', (req, res: Response): void => {
       return;
     }
     configJson.requestingIp = req.get('CF-Connecting-IP') || req.ip;
-    const aioStreams = new AIOStreams(configJson);
-    aioStreams.getStreams(streamRequest).then((streams) => {
+    const scrapie = new Scrapie(configJson);
+    scrapie.getStreams(streamRequest).then((streams) => {
       res.json({ streams: streams });
     });
   } catch (error: any) {
@@ -196,7 +196,7 @@ app.get('/:config/stream/:type/:id.json', (req, res: Response): void => {
         'An unexpected error occurred, please check the logs or create an issue on GitHub',
         rootUrl(req),
         undefined,
-        'https://github.com/Viren070/AIOStreams/issues/new?template=bug_report.yml'
+        'https://github.com/Vedansh/Scrapie/issues/new?template=bug_report.yml'
       )
     );
   }

@@ -11,7 +11,7 @@ body:
       description: Please follow the general troubleshooting steps first
       options:
         - label: >-
-            I have checked open and closed [issues](https://github.com/Viren070/AIOStreams/issues)
+            I have checked open and closed [issues](https://github.com/Vedansh/Scrapie/issues)
           required: true
   - type: dropdown
     id: '9'

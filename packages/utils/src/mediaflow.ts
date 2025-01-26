@@ -1,4 +1,4 @@
-import { Config } from '@aiostreams/types';
+import { Config } from '@scrapie/types';
 import path from 'path';
 import { Settings } from './settings';
 
