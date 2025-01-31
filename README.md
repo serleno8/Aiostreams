@@ -5,7 +5,7 @@
 
 - [Description](#description)
 - [FAQ](#faq)
-  - [How does it work](#how-does-it-work)
+  - [How does it work?](#how-does-it-work)
 - [Usage](#usage)
   - [Public Instace](#public-instance)
   - [Cloudflare Workers](#cloudflare-workers)
